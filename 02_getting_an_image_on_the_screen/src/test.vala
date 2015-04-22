@@ -2,7 +2,7 @@ using SDL;
 
 public class HelloWorld {
 	private Window window;
-	private Surface surface;
+	private unowned Surface surface;
 	private Surface helloSurface;
 
 	~HelloWorld() {
@@ -25,7 +25,7 @@ public class HelloWorld {
 		SDL.init(InitFlag.EVERYTHING);
 
 		window = Window.create("SDL Tutorial", Window.POS_CENTERED, Window.POS_CENTERED, 640, 480, Window.Flags.SHOWN);
-		surface = window.get_surface().ref();
+		surface = window.get_surface();
 		load_media();
 	}
 
