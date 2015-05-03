@@ -63,7 +63,7 @@ public class HelloWorld {
 			return false;
 		}
 
-		if (!SDL.Hints.set_hint(Hints.RENDER_SCALE_QUALITY, "1")) {
+		if (!SDL.Hints.set(Hints.RENDER_SCALE_QUALITY, "1")) {
 			stdout.puts("Warining: Linear texture filtering not enabled!");
 		}
 

@@ -48,7 +48,7 @@ public class MyTexture : Object {
 		return mt;
 	}
 
-	public void render(Renderer renderer, int x, int y, Rectangle? clip = null, double angle = 0.0, Point? center = null, RendererFlip flip = RendererFlip.NONE) {
+	public void render(Renderer renderer, int x, int y, Rectangle? clip = null, double angle = 0.0, Point? center = null, Renderer.Flip flip = Renderer.Flip.NONE) {
 		Rectangle renderQuad = {x, y, width, height};
 		if (clip != null) {
 			renderQuad.w = clip.w;

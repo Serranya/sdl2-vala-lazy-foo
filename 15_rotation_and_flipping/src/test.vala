@@ -19,7 +19,7 @@ public class HelloWorld {
 		bool quit = false;
 		Event e;
 		double degrees = 0;
-		RendererFlip flipType = RendererFlip.NONE;
+		Renderer.Flip flipType = Renderer.Flip.NONE;
 
 		while (!quit) {
 			while (Event.poll(out e) != 0) {
@@ -36,15 +36,15 @@ public class HelloWorld {
 						break;
 
 						case Keycode.Q:
-						flipType = RendererFlip.HORIZONTAL;
+						flipType = Renderer.Flip.HORIZONTAL;
 						break;
 
 						case Keycode.W:
-						flipType = RendererFlip.NONE;
+						flipType = Renderer.Flip.NONE;
 						break;
 
 						case Keycode.E:
-						flipType = RendererFlip.VERTICAL;
+						flipType = Renderer.Flip.VERTICAL;
 						break;
 					}
 				}
@@ -71,7 +71,7 @@ public class HelloWorld {
 			return false;
 		}
 
-		if (!SDL.Hints.set_hint(Hints.RENDER_SCALE_QUALITY, "1")) {
+		if (!SDL.Hints.set(Hints.RENDER_SCALE_QUALITY, "1")) {
 			stdout.puts("Warining: Linear texture filtering not enabled!");
 		}
 
